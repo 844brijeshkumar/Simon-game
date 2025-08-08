@@ -1,34 +1,108 @@
-
-body{
+/* Base Styling */
+body {
     text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.box{
-    display: flex;
-    justify-content: center;
-}
-
-.btn{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: 5px solid black;
+h1, h2, p, #start {
     margin: 10px;
 }
 
-.red{
+/* Box Container */
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button Rows */
+.line1, .line2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Color Buttons */
+.btn {
+    height: 25vw; /* responsive size based on viewport width */
+    width: 25vw;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    border: 5px solid black;
+    margin: 10px;
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out;
+}
+
+/* Color Classes */
+.red {
     background-color: deeppink;
 }
-.green{
+.green {
     background-color: lightseagreen;
 }
-.yellow{
+.yellow {
     background-color: burlywood;
 }
-.blue{
+.blue {
     background-color: cornflowerblue;
 }
 
-.flash{
-    background-color: white;
+/* Flash Animation */
+.flash {
+    background-color: white !important;
+}
+
+/* Responsive Typography */
+h1 {
+    font-size: 6vw;
+    max-font-size: 40px;
+}
+
+h2 {
+    font-size: 4vw;
+    max-font-size: 24px;
+}
+
+p, #start {
+    font-size: 3.5vw;
+    max-font-size: 20px;
+}
+
+/* Media Query for Tablets and Up */
+@media screen and (min-width: 768px) {
+    .box {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .line1, .line2 {
+        flex: 1 1 50%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p, #start {
+        font-size: 18px;
+    }
+}
+
+/* Media Query for Desktops */
+@media screen and (min-width: 1024px) {
+    .btn {
+        width: 180px;
+        height: 180px;
+    }
 }
