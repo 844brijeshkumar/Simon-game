@@ -27,8 +27,8 @@ h1, h2, p, #start {
 
 /* Color Buttons */
 .btn {
-    height: 25vw; /* responsive size based on viewport width */
-    width: 25vw;
+    height: 35vw; /* responsive size based on viewport width */
+    width: 35vw;
     max-width: 200px;
     max-height: 200px;
     min-width: 100px;
