@@ -7,6 +7,7 @@ let highscore = 0;
 
 let h2 = document.querySelector("h2");
 
+let st =document.querySelector("#start");
 function reset() {
     gameseq = [];
     userseq = [];
@@ -17,7 +18,7 @@ function reset() {
     p.innerHTML = `<b>High Score: ${highscore}</b>`;
 }
 
-document.addEventListener("keypress", function() {
+st.addEventListener("keypress", function() {
     if (start == false) {
         console.log("game is start!");
         start = true;
