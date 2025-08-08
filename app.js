@@ -18,7 +18,7 @@ function reset() {
     p.innerHTML = `<b>High Score: ${highscore}</b>`;
 }
 
-st.addEventListener("keypress", function() {
+st.addEventListener("click", function() {
     if (start == false) {
         console.log("game is start!");
         start = true;
